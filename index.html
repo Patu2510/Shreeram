@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्रीराम प्रतिष्ठान सार्वजनिक उत्सव मंडळ</title>
+    <meta name="description" content="बोरिवली आणि कांदिवली परिसरातील सामाजिक आणि सांस्कृतिक कार्यक्रम आयोजित करणारे प्रसिद्ध मंडळ">
+    <meta name="keywords" content="श्रीराम प्रतिष्ठान, गणेशोत्सव, सामाजिक कार्य, बोरिवली, कांदिवली, श्रीराम जन्मोत्सव, हनुमान जयंती">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts - Marathi Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+    --primary-color: #FF4D1C;
+    --secondary-color: #FFB344;
+    --accent-color: #FF7B00;
+    --dark-color: #4A2511;
+    --light-color: #FFF5EA;
+    --white-color: #FFFFFF;
+    --border-radius: 10px;
+    --box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    background-image: linear-gradient(45deg, #FFF5EA 25%, transparent 25%, transparent 75%, #FFF5EA 75%, #FFF5EA), 
+                      linear-gradient(45deg, #FFF5EA 25%, transparent 25%, transparent 75%, #FFF5EA 75%, #FFF5EA);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--white-color) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--white-color) !important;
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 8px 15px !important;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.nav-link:hover:before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--dark-color) !important;
+    transform: translateY(-3px);
+}
+
+.nav-link.active {
+    background-color: var(--secondary-color);
+    color: var(--dark-color) !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.7) 70%);
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 1;
+    animation: heroText 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 1;
+    animation: heroText 1.2s ease-in-out;
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-custom {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    color: var(--white-color);
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(255, 77, 28, 0.4);
+}
+
+.btn-custom:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.4s;
+}
+
+.btn-custom:hover:before {
+    left: 100%;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color));
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 77, 28, 0.5);
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+    border-radius: 5px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s;
+    background-color: var(--white-color);
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.event-date {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    color: var(--white-color);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(255, 77, 28, 0.3);
+    margin-bottom: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    height: 250px;
+    box-shadow: var(--box-shadow);
+    border: 5px solid var(--white-color);
+}
+
+.gallery-item img {
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15);
+    filter: brightness(0.7);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,77,28,0.7) 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay .btn-custom {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.gallery-item:hover .gallery-overlay .btn-custom {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.news-scroll {
+    height: 450px;
+    overflow-y: auto;
+    padding-right: 15px;
+    scroll-behavior: smooth;
+}
+
+.news-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+.news-item {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    background-color: var(--white-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.news-item:hover {
+    background-color: var(--light-color);
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.news-date {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: rgba(255, 123, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 2px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    padding: 12px;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 123, 0, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2D150A 100%);
+    color: var(--white-color);
+    padding: 4rem 0 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+}
+
+footer h5 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+}
+
+.social-icons a:hover {
+    color: var(--white-color);
+    background: var(--primary-color);
+    transform: translateY(-5px) rotate(10deg);
+    box-shadow: 0 5px 15px rgba(255, 77, 28, 0.4);
+}
+
+.footer-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.footer-links a::before {
+    content: '→';
+    margin-right: 10px;
+    color: var(--accent-color);
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 20px;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .navbar-collapse {
+        background-color: rgba(255, 77, 28, 0.95);
+        padding: 20px;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    
+    .nav-link {
+        padding: 10px !important;
+        margin: 5px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">श्रीराम प्रतिष्ठान</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">मुखपृष्ठ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">आमच्याविषयी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">घटनाक्रम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">छायाचित्र गॅलरी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#videos">व्हिडीओ गॅलरी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">बातम्या</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">संपर्क</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>उपनगराचा लिटिल मास्टर <br>श्रीराम प्रतिष्ठान सार्वजनिक उत्सव मंडळ</h1>
+        <p>बोरिवली आणि कांदिवली परिसरातील सामाजिक आणि सांस्कृतिक कार्यक्रम आयोजित करणारे प्रसिद्ध मंडळ</p>
+        <a href="#about" class="btn btn-custom">अधिक माहिती</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">आमच्याविषयी</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/prastavana.png" alt="श्रीराम प्रतिष्ठान" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-4">आमची प्रस्तावना</h3>
+                    <p>श्रीराम प्रतिष्ठान हे बोरिवली आणि कांदिवली परिसरातील सामाजिक आणि सांस्कृतिक कार्यक्रम आयोजित करणारे प्रसिद्ध मंडळ आहे. आमच्या उपक्रमांमध्ये आरोग्य तपासणी शिबिरे, ईएनटी तपासणी, नेत्रतपासणी / चष्मा वाटप आणि अशा अनेक कार्यक्रमांचे आयोजन करतो. प्रत्येक वर्षी गरजू लोकांसाठी विनामूल्य सेवा पुरवतो.</p>
+                    <p>आम्ही विविधतेत एकता या संकल्पनेचे अनुसरण करत गणेशोत्सव, श्रीराम जन्मोत्सव - महाप्रसाद भंडारा, हनुमान जयंती, स्वातंत्र्य दिन आणि प्रजासत्ताक दिन इत्यादी विविध सण साजरे करतो. वेगवेगळ्या धर्म, पंथ, जाती, भाषा, संस्कृती आणि जीवनशैलीचे लोक आमच्यासोबत हे सर्व सण साजरे करण्यासाठी एकत्र येतात.</p>
+                    <p>सर्व सणांसाठी सजावट करताना आम्ही सामाजिक महत्त्वावर भर देतो. अधिक स्पष्टपणे सांगायचे तर, वाहतूक नियम जागरूकता, पाणी संवर्धन, प्रदूषण नियंत्रण आणि अशा अनेक विषयांवर आम्ही प्रकाश टाकतो.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">आमचे घटनाक्रम</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/ganpati.png" class="card-img-top" alt="गणेशोत्सव">
+                        <div class="card-body">
+                            <h5 class="card-title">गणेशोत्सव</h5>
+                            <p class="card-text">दरवर्षी गणेशोत्सव उत्साहात साजरा केला जातो. विविध सामाजिक विषयांवर आधारित सजावट करून जनजागृती केली जाते.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/bhandara.png" class="card-img-top" alt="श्रीराम जन्मोत्सव">
+                        <div class="card-body">
+                            <h5 class="card-title">श्रीराम जन्मोत्सव आणि महाप्रसाद भंडारा</h5>
+                            <p class="card-text">श्रीराम जन्मोत्सव निमित्त मोठ्या प्रमाणात महाप्रसाद भंडाऱ्याचे आयोजन केले जाते.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/arogya.png" class="card-img-top" alt="आरोग्य तपासणी शिबिर">
+                        <div class="card-body">
+                            <h5 class="card-title">आरोग्य तपासणी शिबिर</h5>
+                            <p class="card-text">विभागातील ज्येष्ठ नागरिकांसाठी आणि गरजू लोकांसाठी नियमित आरोग्य तपासणी शिबिरांचे आयोजन केले जाते.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/netra.png" class="card-img-top" alt="नेत्र चिकित्सा शिबिर">
+                        <div class="card-body">
+                            <h5 class="card-title">नेत्र चिकित्सा शिबिर</h5>
+                            <p class="card-text">दरवर्षी विभागातील ज्येष्ठ नागरिकांना तसेच गरजू लोकांना नेत्र चिकित्सा शिबिर आणि चष्मा वाटप केले जाते.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/rakta.png" class="card-img-top" alt="रक्तदान शिबिर">
+                        <div class="card-body">
+                            <h5 class="card-title">रक्तदान शिबिर</h5>
+                            <p class="card-text">श्रीरामनवमीचे औचित्य साधुन Helping Hand व श्री राम प्रतिष्ठान मित्र परिवार यांच्या संयुक्त विद्यमाने महारक्तदान शिबिराचे आयोजन दरवर्षी केले जाते.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/cricket.png" class="card-img-top" alt="क्रिकेट स्पर्धा">
+                        <div class="card-body">
+                            <h5 class="card-title">क्रिकेट स्पर्धा</h5>
+                            <p class="card-text">मंडळातर्फे दरवर्षी ओपन आणि बॉक्स क्रिकेट सामने भरवण्यात येतात.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="section-title">छायाचित्र गॅलरी</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/ganpati.png" alt="गणेशोत्सव 2022">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/arogya.png" alt="आरोग्य शिबिर">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/bhandara.png" alt="श्रीराम जन्मोत्सव">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/rakta.png" alt="रक्तदान शिबिर">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/netra.png" alt="नेत्र चिकित्सा शिबिर">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/cricket.png" alt="क्रिकेट स्पर्धा">
+                        <div class="gallery-overlay">
+                            <a href="#" class="btn btn-custom">पहा</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-custom">सर्व छायाचित्रे पहा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section id="videos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">व्हिडीओ गॅलरी</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="ratio ratio-16x9">
+                            <img src="/oldganpati.png" alt="Video Placeholder" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">गणेशोत्सव 2022 हायलाइट्स</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="ratio ratio-16x9">
+                            <img src="/bhandara.png" alt="Video Placeholder" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">श्रीराम जन्मोत्सव कार्यक्रम</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-custom">सर्व व्हिडीओ पहा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title">बातम्या आणि घोषणा</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="news-scroll">
+                        <div class="news-item">
+                            <h5>गणेशोत्सव 2023 साजरा करण्यासाठी मंडळाची तयारी सुरू</h5>
+                            <p class="news-date">15 जुलै 2023</p>
+                            <p>यंदाच्या गणेशोत्सवाच्या तयारीला मंडळाने सुरुवात केली आहे. सर्व कार्यकर्त्यांनी हातात हात घालून काम सुरू केले आहे. यंदाच्या गणेशोत्सवात पर्यावरणपूरक मूर्ती आणि विशेष डेकोरेशन असणार आहे.</p>
+                        </div>
+                        <div class="news-item">
+                            <h5>नेत्र चिकित्सा शिबिर संपन्न</h5>
+                            <p class="news-date">10 जून 2023</p>
+                            <p>श्रीराम प्रतिष्ठान सार्वजनिक उत्सव मंडळातर्फे आयोजित नेत्र चिकित्सा शिबिरात ३०० हून अधिक ज्येष्ठ नागरिकांनी तपासणी करून घेतली. १५० जणांना मोफत चष्मे वाटप करण्यात आले.</p>
+                        </div>
+                        <div class="news-item">
+                            <h5>महाड येथील पोळलेवाडी गावाला मदत</h5>
+                            <p class="news-date">5 मे 2023</p>
+                            <p>महाड येथील पोळलेवाडी गावाला निसर्गाच्या कोपामुळे झालेल्या नुकसानीनंतर श्रीराम प्रतिष्ठानने मदतीचा हात देण्याचे ठरवले. अत्यावश्यक वस्तूंची मदत पोहचवण्यात आली.</p>
+                        </div>
+                        <div class="news-item">
+                            <h5>रक्तदान शिबिरात मोठा प्रतिसाद</h5>
+                            <p class="news-date">20 एप्रिल 2023</p>
+                            <p>श्रीरामनवमी निमित्त आयोजित रक्तदान शिबिरात २०० हून अधिक लोकांनी रक्तदान केले. थॅलिसेमियाग्रस्त व्यक्तींच्या मदतीसाठी हे रक्त वापरले जाणार आहे.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">संपर्क</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">आमच्याशी संपर्क साधा</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">नाव</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">ईमेल</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">संदेश</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-custom">पाठवा</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">संपर्क माहिती</h5>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> बोरिवली (पश्चिम), मुंबई - ४०० ०९२</p>
+                            <p><i class="fas fa-phone me-2"></i> ९८९२३१२६७३, ९७६८२४३१५८, ९८९२४९१९७४</p>
+                            <p><i class="fas fa-envelope me-2"></i> info@shireerampratishthan.org</p>
+                            <div class="mt-4">
+                                <h5>आमच्या सोशल मीडिया अकाउंट्स</h5>
+                                <div class="social-icons mt-3">
+                                    <a href="https://www.facebook.com/UpanagarachaLittelMaster/" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/upnagaracha_little_master" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>श्रीराम प्रतिष्ठान</h5>
+                    <p>बोरिवली आणि कांदिवली परिसरातील सामाजिक आणि सांस्कृतिक कार्यक्रम आयोजित करणारे प्रसिद्ध मंडळ</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/UpanagarachaLittelMaster/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/upnagaracha_little_master" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>द्रुत लिंक्स</h5>
+                    <div class="footer-links">
+                        <a href="#home">मुखपृष्ठ</a>
+                        <a href="/aboutus.html">आमच्याविषयी</a>
+                        <a href="#events">घटनाक्रम</a>
+                        <a href="#gallery">छायाचित्र गॅलरी</a>
+                        <a href="#videos">व्हिडीओ गॅलरी</a>
+                        <a href="#news">बातम्या</a>
+                        <a href="#contact">संपर्क</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>संपर्क</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> बोरिवली (पश्चिम), मुंबई - ४०० ०९२</p>
+                    <p><i class="fas fa-phone me-2"></i> ९८९२३१२६७३, ९७६८२४३१५८, ९८९२४९१९७४</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@shireerampratishthan.org</p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="background-color: rgba(255,255,255,0.2);">
+            <div class="text-center">
+                <p>&copy; २०२५ श्रीराम प्रतिष्ठान सार्वजनिक उत्सव मंडळ. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add active class to nav items on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
