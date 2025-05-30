@@ -927,6 +927,538 @@ footer h5:hover::after {
         transform: translateY(0);
     }
 }
+        /* Custom CSS for Shriram Pratishthan Website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: linear-gradient(135deg, #ff7b00 0%, #ff4757 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #ffd700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(255, 123, 0, 0.8), rgba(255, 71, 87, 0.8)), 
+                url('/hero-bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #ffd700, #ffed4a);
+    color: #333;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    color: #333;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #ff4757;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #ff7b00, #ff4757);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #ff4757;
+    margin-bottom: 1rem;
+}
+
+/* Special Events Section */
+.special-events-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff4757;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.special-events-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(45deg, #ff7b00, #ff4757);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.special-event-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.special-event-card:hover {
+    border-color: #ff7b00;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 123, 0, 0.2);
+}
+
+.special-event-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff7b00, #ff4757);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.special-event-card:hover .special-event-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.special-event-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.special-event-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff4757;
+    margin-bottom: 1rem;
+}
+
+.special-event-card .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Visarjan Route Styling */
+.visarjan-route {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff7b00;
+    margin-top: 1rem;
+}
+
+.visarjan-route h6 {
+    color: #ff4757;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.route-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 123, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* News Section */
+.news-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.news-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #ff7b00;
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.news-item h5 {
+    color: #ff4757;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.news-date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Contact Form */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.25);
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff7b00, #ff4757);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+footer h5 {
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .special-events-title {
+        font-size: 1.8rem;
+    }
+    
+    .special-event-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .special-event-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .nav-link {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .special-events-title {
+        font-size: 1.6rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Custom Scrollbar */
+.news-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff7b00, #ff4757);
+    border-radius: 10px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff4757, #ff7b00);
+}
+
+/* Loading Animation */
+.loading {
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effects */
+.card-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #ff7b00, #ff4757);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Button Animations */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-animated:hover::before {
+    left: 100%;
+}
     </style>
 </head>
 <body>
@@ -1046,6 +1578,50 @@ footer h5:hover::after {
                         <div class="card-body">
                             <h5 class="card-title">क्रिकेट स्पर्धा</h5>
                             <p class="card-text">मंडळातर्फे दरवर्षी ओपन आणि बॉक्स क्रिकेट सामने भरवण्यात येतात.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Special Ganesh Festival Events -->
+            <div class="container mt-5">
+                <h3 class="text-center mb-4 special-events-title">गणेशोत्सवातील विशेष कार्यक्रम</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card special-event-card">
+                            <div class="card-body text-center">
+                                <div class="special-event-icon">
+                                    <i class="fas fa-hands-praying"></i>
+                                </div>
+                                <h5 class="card-title">पाद्यपुजन सोहळा</h5>
+                                <p class="card-text">गणरायाच्या पावलांची पुजा करून मंडळाच्या सर्व कामांना सुरूवात केली जाते. मंडळाचे अध्यक्ष, सेक्रेटरी, खजिनदार व मुर्तिकार यांच्या हस्ते गणरायाच्या पावलांची पुजा-अर्चा केली जाते. ह्या कार्यक्रमामध्ये विभागातील तसेच मुंबईतील भाविकांची आणि देशी-विदेशी पाहुण्यांची मांदियाळी असते.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card special-event-card">
+                            <div class="card-body text-center">
+                                <div class="special-event-icon">
+                                    <i class="fas fa-om"></i>
+                                </div>
+                                <h5 class="card-title">सत्यनारायणाची महापुजा</h5>
+                                <p class="card-text">गणेशोत्सव काळात मंडळातर्फे सत्यनारायणाची महापुजा आयोजित करण्यात येते. अनेक भाविक पुजा करून तिर्थ प्रसादाचा लाभ घेतात.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card special-event-card">
+                            <div class="card-body text-center">
+                                <div class="special-event-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <h5 class="card-title">विसर्जन मिरवणुक</h5>
+                                <p class="card-text">अनंत चतुर्दशीच्या दिवशी आपल्या राजाची विसर्जन मिरवणूक गणेशगल्ली परिसरातून सकाळी ठीक 12:०० वाजता निघते. ढोल-ताशांचा गजर, पुष्पवृष्टी आणि लाखो भाविकांचा जनसमुदाय हे हया विसर्जन मिरवणुकीचे आकर्षण असते.</p>
+                                <div class="visarjan-route mt-3">
+                                    <h6>मिरवणुकीचा मार्ग:</h6>
+                                    <p class="route-text">मागाठाणे परिसर → पश्चिम द्रुतगती मार्ग → राजेंद्र नगर → बोरिवली पश्चिम → वजिरा नाका → एमएचबी रोड → गोराई खाडी</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
