@@ -1,4 +1,26 @@
-       /* JavaScript for running scroll animations */
+<script>
+// Add Bootstrap and Font Awesome if not already included
+if (!document.querySelector('link[href*="bootstrap"]')) {
+    const bootstrapCSS = document.createElement('link');
+    bootstrapCSS.rel = 'stylesheet';
+    bootstrapCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css';
+    document.head.appendChild(bootstrapCSS);
+}
+
+if (!document.querySelector('link[href*="font-awesome"]')) {
+    const fontAwesome = document.createElement('link');
+    fontAwesome.rel = 'stylesheet';
+    fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+    document.head.appendChild(fontAwesome);
+}
+
+if (!document.querySelector('script[src*="bootstrap"]')) {
+    const bootstrapJS = document.createElement('script');
+    bootstrapJS.src = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js';
+    document.head.appendChild(bootstrapJS);
+}
+
+/* JavaScript for running scroll animations */
 document.addEventListener('DOMContentLoaded', function() {
     // Page loader
     document.body.insertAdjacentHTML('afterbegin', '<div class="pageloader"><div class="loader"></div></div>');
@@ -8,9 +30,38 @@ document.addEventListener('DOMContentLoaded', function() {
         section.insertAdjacentHTML('beforeend', '<div class="wave-bg"></div>');
     });
     
-    // Reveal animations on scroll
-    window.addEventListener('scroll', reveal);
-    function reveal() {
+    // Video thumbnail click handler
+    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+    const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+    const videoFrame = document.getElementById('videoFrame');
+    
+    videoThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-video-id');
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoFrame.src = embedUrl;
+            videoModal.show();
+        });
+    });
+    
+    // Clear video when modal is closed
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function() {
+        videoFrame.src = '';
+    });
+    
+    // Hide page loader after content loads
+    setTimeout(() => {
+        const pageloader = document.querySelector('.pageloader');
+        if (pageloader) {
+            pageloader.style.opacity = '0';
+            setTimeout(() => pageloader.remove(), 500);
+        }
+    }, 1000);
+});
+
+// Reveal animations on scroll
+window.addEventListener('scroll', reveal);
+function reveal() {
     var reveals = document.querySelectorAll('.reveal');
     
     for (var i = 0; i < reveals.length; i++) {
@@ -70,4 +121,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-    
+</script>
