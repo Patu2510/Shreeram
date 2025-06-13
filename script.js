@@ -30,23 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
         section.insertAdjacentHTML('beforeend', '<div class="wave-bg"></div>');
     });
     
-    // Video thumbnail click handler
-    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
-    const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
-    const videoFrame = document.getElementById('videoFrame');
+    // Video container click handler - Direct YouTube redirect
+    const videoContainers = document.querySelectorAll('.video-container');
     
-    videoThumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
+    videoContainers.forEach(container => {
+        container.addEventListener('click', function() {
             const videoId = this.getAttribute('data-video-id');
-            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            videoFrame.src = embedUrl;
-            videoModal.show();
+            const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+            
+            // Open YouTube video in new tab
+            window.open(youtubeUrl, '_blank');
         });
-    });
-    
-    // Clear video when modal is closed
-    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function() {
-        videoFrame.src = '';
     });
     
     // Hide page loader after content loads
