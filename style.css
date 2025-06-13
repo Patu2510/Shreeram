@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION */
+ /* NAVIGATION */
 .navbar {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     padding: 1rem 0;
@@ -153,6 +153,37 @@ body {
     height: 80px;
     background: linear-gradient(to top, var(--light-color), transparent);
     z-index: 1;
+}
+
+/* Hero Corner Logos */
+.hero img[alt="logo1"] {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.5));
+}
+
+.hero img[alt="logo2"] {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 210px;
+    height: 190px;
+    z-index: 10;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.5));
+}
+
+.hero img[alt="logo1"]:hover,
+.hero img[alt="logo2"]:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .hero-content {
@@ -295,12 +326,27 @@ body {
     50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - Updated Logo Sizes */
 @media (max-width: 768px) {
     .hero {
         min-height: 100vh;
         padding: 1.5rem 1rem;
         background-attachment: scroll; /* Better performance on mobile */
+    }
+    
+    /* Adjust logo sizes for mobile - Made bigger and more readable */
+    .hero img[alt="logo1"] {
+        width: 100px;
+        height: 100px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .hero img[alt="logo2"] {
+        width: 140px;
+        height: 127px;
+        top: 15px;
+        right: 15px;
     }
     
     .hero h1 {
@@ -337,6 +383,21 @@ body {
         padding: 1rem 0.5rem;
     }
     
+    /* Adjusted logo sizes for very small screens - Still readable */
+    .hero img[alt="logo1"] {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .hero img[alt="logo2"] {
+        width: 112px;
+        height: 101px;
+        top: 10px;
+        right: 10px;
+    }
+    
     .hero h1 {
         margin-bottom: 0.8rem;
     }
@@ -355,11 +416,25 @@ body {
     }
 }
 
-/* Landscape mobile */
+/* Landscape mobile - Better sizing for landscape orientation */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
         min-height: 100vh;
         padding: 1rem;
+    }
+    
+    .hero img[alt="logo1"] {
+        width: 90px;
+        height: 90px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .hero img[alt="logo2"] {
+        width: 126px;
+        height: 114px;
+        top: 10px;
+        right: 10px;
     }
     
     .hero h1 {
@@ -384,6 +459,7 @@ body {
         font-size: 0.9rem;
     }
 }
+
 /* BUTTONS */
 .btn-custom {
     background: linear-gradient(to right, var(--primary-color), var(--accent-color));
